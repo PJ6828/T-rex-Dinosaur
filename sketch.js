@@ -92,7 +92,7 @@ function draw() {
     //scoring
     score = score + Math.round(getFrameRate()/60);
     
-    if(score>0 && score%100 === 0){
+    if(score > 0 && score%100 === 0){
        checkPointSound.play() 
     }
     
@@ -116,8 +116,7 @@ function draw() {
     spawnObstacles();
     
     if(obstaclesGroup.isTouching(trex)){
-        //trex.velocityY = -12;
-        jumpSound.play();
+      
         gameState = END;
         dieSound.play()
       
