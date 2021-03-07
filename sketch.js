@@ -41,6 +41,7 @@ function setup() {
   trex = createSprite(50,160,20,50);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
+  trex.setCollider("cirlce",0,0,40);
   
 
   trex.scale = 0.5;
