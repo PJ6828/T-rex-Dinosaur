@@ -71,6 +71,7 @@ function setup() {
   trex.debug = true
   
   score = 0;
+  highScore = 0;
   
 }
 
