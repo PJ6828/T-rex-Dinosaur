@@ -8,7 +8,7 @@ var ground, invisibleGround, groundImage;
 var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
-var score;
+var score, highScore;
 var gameOverImg,restartImg
 var jumpSound , checkPointSound, dieSound
 
@@ -76,9 +76,10 @@ function setup() {
 
 function draw() {
   
-  background("white");
+  background(240);
   //displaying score
-  text("Score: "+ score, 500,50);
+  text("SCORE: "+ score, 500,50);
+  text("HIGHSCORE: "+ highScore, 375,50);
   
   
   if(gameState === PLAY){
@@ -128,7 +129,9 @@ function draw() {
      //change the trex animation
       trex.changeAnimation("collided", trex_collided);
     
-     
+     if(score > highScore) {
+       highscore = score;
+     }
      
       ground.velocityX = 0;
       trex.velocityY = 0
