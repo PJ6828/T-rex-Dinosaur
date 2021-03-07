@@ -76,7 +76,7 @@ function setup() {
 
 function draw() {
   
-  background(180);
+  background(240);
   //displaying score
   text("Score: "+ score, 500,50);
   
@@ -99,7 +99,7 @@ function draw() {
     }
     
     //jump when the space key is pressed
-    if(keyDown("space")&& trex.y >= 100) {
+    if(keyDown("space")&& trex.y >= 160) {
         trex.velocityY = -12;
         jumpSound.play();
     }
@@ -168,7 +168,7 @@ function reset(){
 function spawnObstacles(){
  if (frameCount % 60 === 0){
    var obstacle = createSprite(600,165,10,40);
-   obstacle.velocityX = -(6 + score/100);
+   obstacle.velocityX = -(4 + 3 * score/100);
    
     //generate random obstacles
     var rand = Math.round(random(1,6));
